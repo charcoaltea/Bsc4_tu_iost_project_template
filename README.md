@@ -1,4 +1,4 @@
-# Bsc4_project_template
+# Bsc4_tu_iost_project_template
 This is a LaTeX template for T.U. IOST BSc 4th year project work
 
 Very quick intro to LaTeX for new users:
