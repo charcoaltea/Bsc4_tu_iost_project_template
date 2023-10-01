@@ -1,12 +1,12 @@
 # Bsc4_tu_iost_project_template
-This is a template created for 4th year B.Sc. project work in accordance to the
-guidelines by TU. Download this source code and open it with your texteditor
-of choice, then navigate to file named 'main.tex' and compile it.
-
 Very quick intro to LaTeX for new users:
 It is a free software used to prepare professional looking documents. You write
 code in one file say 'main.tex', after compiling you get an output file
 'main.pdf' which is a pdf document.
+
+This is a template created for 4th year B.Sc. project work in accordance to the
+guidelines by TU. Download this source code and open it with your texteditor
+of choice, then navigate to file named 'main.tex' and compile it.
 
 File locations for the respective contents is listed below :
 
