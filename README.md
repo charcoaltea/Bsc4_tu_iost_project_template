@@ -1,5 +1,4 @@
 # Bsc4_tu_iost_project_template
-
 Very quick intro to LaTeX for new users:
 It is a free software used to prepare professional looking documents. You write
 code in one file say 'main.tex', after compiling you get an output file
