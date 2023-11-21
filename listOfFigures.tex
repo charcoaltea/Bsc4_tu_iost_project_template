@@ -1,0 +1,18 @@
+\pagebreak
+
+%\Section{List of Figures}
+
+\addcontentsline{toc}{section}{\fonts{12}{18} List of Figures}
+\renewcommand{\listfigurename}{\vspace{-2.3cm}\hfill\fonts{16}{18} LIST OF
+FIGURES\hfill} %changing the heading style for list of figures
+%addind the text 'Page No.' on the top right of the page
+\renewcommand{\cftafterloftitle}{
+	\\[\baselineskip]\mbox{}\hfill{\textbf{\fonts{12}{18} Page No.}}}
+%making the text 'Figure' bold faced 
+\renewcommand{\cftfigpresnum}{\bfseries{\fonts{12}{18} Figure }}
+%making the symbol ':' bold faced 
+\renewcommand{\cftfigaftersnum}{\textbf{ :}}
+\setlength{\cftfignumwidth}{3cm} %2.5cm gap between number and title of enrty
+\renewcommand{\cftfigfont}{\fonts{12}{18}} %using font size 12 for entries
+
+

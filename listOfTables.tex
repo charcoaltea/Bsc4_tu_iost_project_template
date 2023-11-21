@@ -1,0 +1,16 @@
+%\Section{List of Tables}
+
+\addcontentsline{toc}{section}{\fonts{12}{18} List of Tables}
+\renewcommand{\listtablename}{\vspace{-2.3cm}\hfill\fonts{16}{18} LIST OF
+TABLES\hfill} %changing the heading style for list of tables
+%addind the text 'Page No.' on the top right of the page
+\renewcommand{\cftafterlottitle}{
+	\\[\baselineskip]\mbox{}\hfill{\textbf{\fonts{12}{18} Page No.}}}
+\renewcommand{\cftdot}{} %removing the dots
+%making the text 'Table' bold faced 
+\renewcommand{\cfttabpresnum}{\bfseries{\fonts{12}{18} Table }}
+%making the symbol ':' bold faced 
+\renewcommand{\cfttabaftersnum}{\textbf{ :}}
+\setlength{\cfttabnumwidth}{2.5cm} %2cm gap between number and title of entry
+\renewcommand{\cfttabfont}{\fonts{12}{18}} %using font size 12 for entries
+

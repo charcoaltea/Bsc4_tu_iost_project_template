@@ -1,190 +1,64 @@
 \documentclass[12pt]{report}
-\usepackage{style} %loading the preambles written in style.sty file
+\usepackage{mathptmx}
 
-%replace below ...nam... with your name
-\def\myname{...nam...}
-%replace below ...nam... with your supervisor's name
-\def\sup{...nam...}
-%replace below ...nam... with your co-supervisor's name, if not then leave it
-%empty like { }
-\def\cosup{...nam...}
-%replace below ...sub... with your subject's name
-\def\sub{...sub...}
-\def\tu{Tribhuvan University}
-\def\iost{Institute of Science and Technology}
-%replace below ...clz... with your college name
-\def\clz{...clz...}
-%replace below ...hod... with your head of department's name
-\def\hod{...nam...}
-%replace below ...sub... with your subject's name
-\def\depart{Department of ...sub...}
-%replace below ...num... with your symbol number
-\def\sym{...num...}
-%replace below ...num... with your registration number
-\def\reg{...num...}
-\def\bsc{Bachelor of Science}
-%replace below ...title... with the title of your project
-\def\title{...title...} 
+%\input{fonts}
+\usepackage{style} %loading the preambles written in style.sty file
+\input{commands}
+\input{names}
 
 \begin{document}
 
-\pagenumbering{roman} %using roman numeric for page number
+	\input{coverPage}
 
-{\fonta{12} 
+	\input{chapters/recomendation}
 
-\input{coverpage}
+	\input{chapters/declaration}
 
-\chapter*{\fontb RECOMENDATION}
+	\input{chapters/letterofforward}
 
-\input{chapters/recomendation}
+	\input{chapters/boardexam}
 
-\chapter*{\fontb DECLARATION}
+	\input{chapters/acknowledgements}
 
-\input{chapters/declaration}
+	\input{chapters/abstract}
 
-\chapter*{\fontb LETTER OF FORWARD}
+	%\input{chapters/sodhsar}
 
-\input{chapters/letterofforward}
+	\input{chapters/acronyms}
 
-\chapter*{\fontb BOARD OF EXAMINATION AND\\
-CERTIFICATE OF APPROVAL}
-	
-\input{chapters/boardexam}
+	\input{chapters/symbols}
 
-\chapter*{\fontb ACKNOWLEDGEMENTS}
+	\input{listOfTables}
+	\listoftables %generates list of tables
 
-\input{chapters/acknowledgements}
+	\input{listOfFigures}
+	\listoffigures %generates list of figures
 
-\chapter*{\fontb ABSTRACT}
+	\input{tableOfContents}
+	\tableofcontents %generates table of contents
+	\addtocontents{toc} %adds the contets to the TOC
 
-\input{chapters/abstract}
+	%\input{example}%example file
 
-}
+	\input{chapters/1.introduction}
 
-\chapter*{\vspace{-2.5cm} \centering\fonta{18}{\dn foDsAr}}
+	\input{chapters/2.literature}
 
-\input{chapters/sodhsar}
+	%\addtocontents{toc}{\protect\newpage} %pagebreak in table of contents
+	\input{chapters/3.materials}
 
-{\fonta{12}
+	\input{chapters/4.results}
 
-\chapter*{\fontb LIST OF ACRONYMS AND ABBREVIATIONS}
+	\input{chapters/5.conclusion}
 
-\input{chapters/acronyms}
+	\addcontentsline{toc}{chapter}{\bfseries\fonts{14}{18} REFERENCE
+	\vspace{0.5cm}}
+	\printbibliography[title=\hfill Reference \hfill]
 
-\chapter*{\fontb LIST OF SYMBOLS}
+	\input{chapters/appendix}
 
-\input{chapters/symbols}
-
-\clearpage
-
-\toca{section}{\fonta{12}}{List of Tables}
-\renewcommand{\listtablename}{\vspace{-2.3cm}\hfill\fonta{16} LIST OF TABLES
-\hfill} %changing the heading style for list of tables
-%addind the text 'Page No.' on the top right of the page
-\renewcommand{\cftafterlottitle}{
-	\\[\baselineskip]\mbox{}\hfill{\textbf{\fonta{12} Page No.}}}
-\renewcommand{\cftdot}{} %removing the dots
-%making the text 'Table' bold faced 
-\renewcommand{\cfttabpresnum}{\bfseries{\fonta{12} Table }}
-%making the symbol ':' bold faced 
-\renewcommand{\cfttabaftersnum}{\textbf{ :}}
-\setlength{\cfttabnumwidth}{2cm} %2cm gap between number and title of entry
-\renewcommand{\cfttabfont}{\fonta{12}} %using font size 12 for entries
-\listoftables %generates list of tables
-
-\clearpage
-
-\toca{section}{\fonta{12}}{List of Figures}
-\renewcommand{\listfigurename}{\vspace{-2.3cm}\hfill\fonta{16} LIST OF FIGURES
-\hfill} %changing the heading style for list of figures
-%addind the text 'Page No.' on the top right of the page
-\renewcommand{\cftafterloftitle}{
-	\\[\baselineskip]\mbox{}\hfill{\textbf{\fonta{12} Page No.}}}
-%making the text 'Figure' bold faced 
-\renewcommand{\cftfigpresnum}{\bfseries{\fonta{12} Figure }}
-%making the symbol ':' bold faced 
-\renewcommand{\cftfigaftersnum}{\textbf{ :}}
-\setlength{\cftfignumwidth}{2.5cm} %2.5cm gap between number and title of enrty
-\renewcommand{\cftfigfont}{\fonta{12}} %using font size 12 for entries
-\listoffigures %generates list of figures
-
-\clearpage
-
-\renewcommand{\cftbeforetoctitleskip}{0cm}
-\renewcommand{\contentsname}{\vspace{-0.5cm}\hfill\fonta{16} TABLE OF CONTENTS
-\hfill} %changing the heading style for table of contents
-%addind the text 'Page No.' on the top right of the page
-\renewcommand{\cftaftertoctitle}{
-	\\[\baselineskip]\mbox{}\hfill{\textbf{\fonta{12} Page No.}}}
-\cftpagenumbersoff{chapter} %no page no. shown for chapter headings
-\renewcommand{\cftchapindent}{0.6cm} %adding 0.5 cm indent to chapter heading
-\tableofcontents %generates table of contents
-\addtocontents{toc} %adds the contets to the TOC
-
-\clearpage
-
-%below file named example is just for example purpose, comment the below line
-\input{example}
-%above file named example is just for example purpose, comment the above line
-
-\chapter*{{\fontb CHAPTER 1\\} \fontc{1. INTRODUCTION}}
-
-\pagenumbering{arabic} %using arabic style for page numbering
-
-\input{chapters/1.introduction}
-
-\chapter*{{\fontb CHAPTER 2\\} \fontc{2. LITERATURE REVIEW}}
-
-\input{chapters/2.literature}
-
-\chapter*{{\fontb CHAPTER 3\\} \fontc{3. MATERIALS AND METHODS}}
-
-\input{chapters/3.materials}
-
-\chapter*{{\fontb CHAPTER 4\\} \fontc{4. RESULTS AND DISCUSSION}}
-
-\input{chapters/4.results}
-
-\chapter*{{\fontb CHAPTER 5\\} \fontc{5. CONCLUSION AND RECOMMENDATION}}
-
-\input{chapters/5.conclusion}
-
-\clearpage
-\renewcommand{\bibname}{\fontb REFERENCE}% making title name REFERENCE
-\toca{chapter}{\fonta{14}}{REFERENCE}% puting reference in TOC
-
-\bibliographystyle{apalike}% using APA style for citation
-\bibliography{reference}
-\clearpage
-
-\chapter*{\fontb APPENDIX\\}
-
-\input{appendix}
-
-%%uncomment bottom 2 files if necessary only
-%\input{anusuchi1}
-%\input{anusuchi2}
-%%uncomment above 2 files if necessary only
-
-}
+	%\input{anusuchi1}
+	%\input{anusuchi2}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

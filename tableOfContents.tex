@@ -1,0 +1,10 @@
+\pagebreak
+
+\renewcommand{\cftbeforetoctitleskip}{0cm}
+\renewcommand{\contentsname}{\vspace{-0.5cm}\hfill\fonts{16}{18} TABLE OF
+CONTENTS\hfill} %changing the heading style for table of contents
+%addind the text 'Page No.' on the top right of the page
+\renewcommand{\cftaftertoctitle}{
+	\\[\baselineskip]\mbox{}\hfill{\textbf{\fonts{12}{18} Page No.}}}
+\cftpagenumbersoff{chapter} %no page no. shown for chapter headings
+
