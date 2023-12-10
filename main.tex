@@ -1,14 +1,14 @@
 \documentclass[12pt]{report}
 \usepackage{mathptmx}
 
-%\input{fonts}
-\usepackage{style} %loading the preambles written in style.sty file
-\input{commands}
-\input{names}
+%\input{customizeCode/fonts}
+\input{customizeCode/packages} %loading the preambles written in packages.tex file
+\input{customizeCode/commands}
+\input{customizeCode/names}
 
 \begin{document}
 
-	\input{coverPage}
+	\input{chapters/coverPage}
 
 	\input{chapters/recomendation}
 
@@ -22,23 +22,23 @@
 
 	\input{chapters/abstract}
 
-	%\input{chapters/sodhsar}
+	\input{chapters/sodhsar}
 
 	\input{chapters/acronyms}
 
 	\input{chapters/symbols}
 
-	\input{listOfTables}
+	\input{customizeCode/listOfTables}
 	\listoftables %generates list of tables
 
-	\input{listOfFigures}
+	\input{customizeCode/listOfFigures}
 	\listoffigures %generates list of figures
 
-	\input{tableOfContents}
+	\input{customizeCode/tableOfContents}
 	\tableofcontents %generates table of contents
 	\addtocontents{toc} %adds the contets to the TOC
 
-	%\input{example}%example file
+	%\input{chapters/example}%example file
 
 	\input{chapters/1.introduction}
 
@@ -57,8 +57,8 @@
 
 	\input{chapters/appendix}
 
-	%\input{anusuchi1}
-	%\input{anusuchi2}
+	%\input{chapters/anusuchi1}
+	%\input{chapters/anusuchi2}
 
 \end{document}
 
